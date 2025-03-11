@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Generating Robot Constitutions & Benchmarks for Semantic Safety.">
+  <meta name="keywords" content="ASIMOV-Benchmark Robot Constitutions">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ASIMOV Benchmark</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/robot.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Generating Robot Constitutions<br>& Benchmarks for Semantic Safety</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://sermanet.github.io">Pierre Sermanet</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://mae.princeton.edu/people/faculty/majumdar">Anirudha Majumdar</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.alexirpan.com/">Alex Irpan</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/dmitrykalashnikov">Dmitry Kalashnikov</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://vikas.sindhwani.org/">Vikas Sindhwani</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Google DeepMind,</span>
+            <span class="author-block"><sup>2</sup>Princeton University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/FIXME"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/FIXME"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/asimov-benchmark/code/blob/main/ASIMOV_Datasets.ipynb"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span>
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/asimov-benchmark/code/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+	<img src="./static/images/asimov-benchmark.png"
+	 class="teaser"
+	 style="width: 100%;"
+	 alt="ASIMOV-Benchmark questions."/>
+    
+    
+      <h2 class="subtitle has-text-centered">
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+Until recently, robotics safety research was predominantly about collision avoidance and hazard reduction
+in the immediate vicinity of a robot. Since the advent of large vision and language models (VLMs), robots
+are now also capable of higher-level semantic scene understanding and natural language interactions with
+humans. Despite their known vulnerabilities (e.g. hallucinations or jail-breaking), VLMs are being handed
+control of robots capable of physical contact with the real world. This can lead to dangerous behaviors,
+making semantic safety for robots a matter of immediate concern.
+</p>
+<p>Our contributions in this paper are
+two fold: first, to address these emerging risks, we release the ASIMOV Benchmark — a large-scale
+and comprehensive collection of datasets for evaluating and improving semantic safety of foundation
+models serving as robot brains. Our data generation recipe is highly scalable: by leveraging text and
+image generation techniques, we generate undesirable situations from real-world visual scenes and
+human injury reports from hospitals. Secondly, we develop a framework to automatically generate robot
+constitutions from real-world data to steer a robot’s behavior using Constitutional AI mechanisms. We
+propose a novel auto-amending process that is able to introduce nuances in written rules of behavior – this
+can lead to increased alignment with human preferences on behavior desirability and safety. We explore
+trade-offs between generality and specificity across a diverse set of constitutions of different lengths, and
+demonstrate that a robot is able to effectively reject unconstitutional actions. We measure a top alignment
+rate of 84.3% on the ASIMOV Benchmark using generated constitutions, outperforming no-constitution
+baselines and human-written constitutions.
+</p>
+<p>We do not advocate for a specific universal constitution in
+this work because rules require customization to different legal, cultural and administrative contexts;
+instead, we argue that human interpretability and modifiability of constitutions inferred from data
+makes them an ideal medium for behavior governance of AI-controlled robots.
+	  </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+<section class="section">
+
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+            <img src="./static/images/robot_constitutions.png"
+                 class="interpolation-image"
+                 alt="Generated Robot Constitutions."/>
+   </div>
+   <br>
+   <br>
+    <div class="columns is-centered">
+            <img src="./static/images/constitutions_plot.png"
+                 class="interpolation-image"
+		 style="width: 100%;"
+                 alt="Constitutions vs Length."/>
+   </div>
+   <br>
+   <br>
+    <div class="columns is-centered">
+            <img src="./static/images/asimov_generation.png"
+                 class="interpolation-image"
+		 style="width: 100%;"
+                 alt="Generation process for some ASIMOV questions."/>
+   </div>
+</div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{Sermanet2025RobotConstitutions,
+  author    = {Pierre Sermanet and Anirudha Majumdar and Alex Irpan and Dmitry Kalashnikov and Vikas Sindhwani},
+  title     = {Generating Robot Constitutions \& Benchmarks for Semantic Safety},
+  journal   = {arXiv preprint arXiv:FIXME},
+  url       = {https://arxiv.org/abs/FIXME},
+  year      = {2025},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+          Website borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
