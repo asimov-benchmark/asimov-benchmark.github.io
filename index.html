@@ -9,17 +9,17 @@
   <title>ASIMOV Benchmark</title>
   <link rel="icon" href="./static/images/robot.png">
   
-  <!-- Redirect to v2 by default -->
+  <!-- Redirect to v1 by default -->
   <script>
     // Check if user has a saved preference
-    const savedVersion = localStorage.getItem('asimov-version') || 'v2';
-    window.location.href = savedVersion === 'v1' ? './v1/' : './v2/';
+    const savedVersion = localStorage.getItem("asimov-version") || "v1";
+    window.location.href = savedVersion === "v2" ? "./v2/" : "./v1/";
   </script>
   
   <!-- Fallback if JavaScript is disabled -->
-  <meta http-equiv="refresh" content="0; url=./v2/">
+  <meta http-equiv="refresh" content="0; url=./v1/">
 </head>
 <body>
-  <p>Redirecting to ASIMOV Benchmark v2... <a href="./v2/">Click here if not redirected automatically.</a></p>
+  <p>Redirecting to ASIMOV Benchmark v1... <a href="./v1/">Click here if not redirected automatically.</a></p>
 </body>
 </html>
