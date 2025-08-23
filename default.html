@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Generating Robot Constitutions & Benchmarks for Semantic Safety.">
+  <meta name="keywords" content="ASIMOV-Benchmark Robot Constitutions">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ASIMOV Benchmark</title>
+  <link rel="icon" href="./static/images/robot.png">
+  
+  <!-- Redirect to v2 by default -->
+  <script>
+    // Check if user has a saved preference
+    const savedVersion = localStorage.getItem('asimov-version') || 'v2';
+    window.location.href = savedVersion === 'v1' ? './v1/' : './v2/';
+  </script>
+  
+  <!-- Fallback if JavaScript is disabled -->
+  <meta http-equiv="refresh" content="0; url=./v2/">
+</head>
+<body>
+  <p>Redirecting to ASIMOV Benchmark v2... <a href="./v2/">Click here if not redirected automatically.</a></p>
+</body>
+</html>
