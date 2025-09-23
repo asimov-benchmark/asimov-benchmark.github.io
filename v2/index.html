@@ -203,32 +203,11 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-Until recently, robotics safety research was predominantly about collision avoidance and hazard reduction
-in the immediate vicinity of a robot. Since the advent of large vision and language models (VLMs), robots
-are now also capable of higher-level semantic scene understanding and natural language interactions with
-humans. Despite their known vulnerabilities (e.g. hallucinations or jail-breaking), VLMs are being handed
-control of robots capable of physical contact with the real world. This can lead to dangerous behaviors,
-making semantic safety for robots a matter of immediate concern.
+          <p>When AI interacts with the physical world --- as a robot or an assistive agent --- new safety challenges emerge beyond those of purely ``digital AI". In such interactions, the potential for physical harm is direct and immediate. How well do state-of-the-art foundation models understand common-sense facts about physical safety, e.g. that a box may be too heavy to lift, or that a hot cup of coffee should not be handed to a child?
 </p>
-<p>Our contributions in this paper are
-two fold: first, to address these emerging risks, we release the ASIMOV Benchmark — a large-scale
-and comprehensive collection of datasets for evaluating and improving semantic safety of foundation
-models serving as robot brains. Our data generation recipe is highly scalable: by leveraging text and
-image generation techniques, we generate undesirable situations from real-world visual scenes and
-human injury reports from hospitals. Secondly, we develop a framework to automatically generate robot
-constitutions from real-world data to steer a robot's behavior using Constitutional AI mechanisms. We
-propose a novel auto-amending process that is able to introduce nuances in written rules of behavior – this
-can lead to increased alignment with human preferences on behavior desirability and safety. We explore
-trade-offs between generality and specificity across a diverse set of constitutions of different lengths, and
-demonstrate that a robot is able to effectively reject unconstitutional actions. We measure a top alignment
-rate of 84.3% on the ASIMOV Benchmark using generated constitutions, outperforming no-constitution
-baselines and human-written constitutions.
+<p>In this paper, our contributions are three-fold: first, we develop a highly scalable approach to continuous physical safety benchmarking of Embodied AI systems, grounded in real-world injury narratives and operational safety constraints. To probe multimodal safety understanding, we turn these narratives and constraints into photorealistic images and videos capturing transitions from safe to unsafe states, using advanced generative models. Secondly, we comprehensively analyze the ability of major foundation models to perceive risks, reason about safety, and trigger interventions; this yields insights into their deployment readiness for safety-critical agentic applications.
 </p>
-<p>We do not advocate for a specific universal constitution in
-this work because rules require customization to different legal, cultural and administrative contexts;
-instead, we argue that human interpretability and modifiability of constitutions inferred from data
-makes them an ideal medium for behavior governance of AI-controlled robots.
+<p>Finally, we develop a post-training paradigm to teach models to explicitly reason about embodiment-specific safety constraints provided through system instructions. The resulting models generate thinking traces that make safety reasoning interpretable and transparent, achieving state of the art performance in constraint satisfaction evaluations.  
 	  </p>
         </div>
       </div>
